@@ -1,7 +1,5 @@
 <html>
 
-
-
 <script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
 <script type='text/javascript'>
 	var initESW = function(gslbBaseURL) {
@@ -13,6 +11,39 @@
 
 		//embedded_svc.settings.loadingText = ''; //(Defaults to Loading)
 		//embedded_svc.settings.storageDomain = 'yourdomain.com'; //(Sets the domain for your deployment so that visitors can navigate subdomains during a chat session)
+		
+		 embedded_svc.settings.extraPrechatFormDetails = [
+    			{
+    			"label" : "Brand",
+    			"value" : "Cape Union Mart",
+    			"transcriptFields" : ["Brand__c"]
+    			},
+    		 	{
+    			 "label" : "Customer Service Email",
+    			 "value" : "customer-service@capeunionmart.co.za",
+    			 "transcriptFields" : ["Customer_Service_Email__c"]
+    			},
+    			{
+    			 "label" : "Order Tracking URL",
+    			 "value" : "<a href=\"https://www.capeunionmart.co.za/on/demandware.store/Sites-CUM-Site/en_ZA/Order-Tracker\">Track Order</a>",
+    			 "transcriptFields" : ["Order_Tracking_URL__c"]
+    			},
+    			 {
+    			 "label" : "Password Reset Link",
+    			 "value" : "https://www.capeunionmart.co.za/account/passwordreset",
+    			 "transcriptFields" : ["Password_Reset_Link__c"]
+    			},
+    			{
+    			 "label" : "Gift Card Status Link",
+    			 "value" : "https://www.capeunionmart.co.za/giftcardcheckbalance/",
+    			 "transcriptFields" : ["Gift_Card_Status_Link__c"]
+    			},
+	    		{
+    			 "label" : "Contact Us Link",
+    			 "value" : "https://www.capeunionmart.co.za/contact.html",
+    			 "transcriptFields" : ["Contact_Us_Link__c"]
+    			}
+    ];
 
 		// Settings for Chat
 		//embedded_svc.settings.directToButtonRouting = function(prechatFormData) {
